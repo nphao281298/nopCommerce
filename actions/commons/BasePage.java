@@ -331,27 +331,27 @@ public class BasePage {
         new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(webDriver,locator)));
     }
 
-    // -----
+    // -----Only use for Level_07
     public AddressPageObject openAddressPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.ADDRESS_LINK);
-        clickToElement(driver,PageBaseUI.ADDRESS_LINK);
+        clickToElement(driver,SidebarPageUI.ADDRESS_LINK);
         return PageGenerator.getAddressPage(driver);
     }
 
     public RewarPointPageObject openRewardPointPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.REWARD_POINT_LINK);
-        clickToElement(driver,PageBaseUI.REWARD_POINT_LINK);
+        clickToElement(driver,SidebarPageUI.REWARD_POINT_LINK);
         return PageGenerator.getRewarPointPage(driver);
     }
 
     public CustomerInforPageObject openCustomerInfoPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.CUSTOMER_INFOR_LINK);
-        clickToElement(driver, PageBaseUI.CUSTOMER_INFOR_LINK);
+        clickToElement(driver, SidebarPageUI.CUSTOMER_INFOR_LINK);
         return PageGenerator.getCustomerInforPage(driver);
     }
     public OrderPageObject openOrderPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.ORDER_LINK);
-        clickToElement(driver, PageBaseUI.ORDER_LINK);
+        clickToElement(driver, SidebarPageUI.ORDER_LINK);
         return PageGenerator.getOrderPage(driver);
     }
 }
