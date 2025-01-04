@@ -5,9 +5,10 @@ import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import pageUIs.CustomerInforPageUI;
 
-public class CustomerInforPageObject extends BasePage {
+public class CustomerInforPageObject extends SidebarPageObject {
     WebDriver driver;
     public CustomerInforPageObject(WebDriver driver) {
+        super(driver);
         this.driver = driver;
     }
 
