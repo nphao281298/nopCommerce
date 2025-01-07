@@ -6,11 +6,11 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObject.AddressPageObject;
-import pageObject.CustomerInforPageObject;
-import pageObject.OrderPageObject;
-import pageObject.RewarPointPageObject;
-import pageUIs.*;
+import pageObject.users.UserAddressPO;
+import pageObject.users.UserCustomerInforPO;
+import pageObject.users.UserOrderPO;
+import pageObject.users.UserRewarPointPO;
+import pageUIs.PageBaseUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -332,26 +332,26 @@ public class BasePage {
     }
 
     // -----Only use for Level_07
-    public AddressPageObject openAddressPage(WebDriver driver) {
+    public UserAddressPO openAddressPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.ADDRESS_LINK);
         clickToElement(driver,PageBaseUI.ADDRESS_LINK);
-        return PageGenerator.getAddressPage(driver);
+        return PageGenerator.getUserAddressPage(driver);
     }
 
-    public RewarPointPageObject openRewardPointPage(WebDriver driver) {
+    public UserRewarPointPO openRewardPointPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.REWARD_POINT_LINK);
         clickToElement(driver,PageBaseUI.REWARD_POINT_LINK);
-        return PageGenerator.getRewarPointPage(driver);
+        return PageGenerator.getUserRewarPointPage(driver);
     }
 
-    public CustomerInforPageObject openCustomerInfoPage(WebDriver driver) {
+    public UserCustomerInforPO openCustomerInfoPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.CUSTOMER_INFOR_LINK);
         clickToElement(driver, PageBaseUI.CUSTOMER_INFOR_LINK);
-        return PageGenerator.getCustomerInforPage(driver);
+        return PageGenerator.getUserCustomerInforPage(driver);
     }
-    public OrderPageObject openOrderPage(WebDriver driver) {
+    public UserOrderPO openOrderPage(WebDriver driver) {
         waitForElementClickable(driver, PageBaseUI.ORDER_LINK);
         clickToElement(driver, PageBaseUI.ORDER_LINK);
-        return PageGenerator.getOrderPage(driver);
+        return PageGenerator.getUserOrderPage(driver);
     }
 }
