@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObject.*;
+import pageObject.users.*;
 
 public class Level_07_Switch_Page_Object extends BaseTest {
 
@@ -16,7 +16,7 @@ public class Level_07_Switch_Page_Object extends BaseTest {
     @BeforeClass
     public void beforeClass(String browserName){
         driver = getBrowserDriver(browserName);
-        homePage = PageGenerator.getHomePage(driver);
+        homePage = PageGenerator.getUserHomePage(driver);
 
         firstName = "John";
         lastName = "Philip";
@@ -73,11 +73,11 @@ public class Level_07_Switch_Page_Object extends BaseTest {
     private String firstName;
     private String emailAddress;
     private String password;
-    private HomePageObject homePage;
-    private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
-    private CustomerInforPageObject customerInfoPage;
-    private AddressPageObject addressPage;
-    private OrderPageObject orderPage;
-    private RewarPointPageObject rewardPointPage;
+    private UserHomePO homePage;
+    private UserRegisterPO registerPage;
+    private UserLoginPO loginPage;
+    private UserCustomerInforPO customerInfoPage;
+    private UserAddressPO addressPage;
+    private UserOrderPO orderPage;
+    private UserRewarPointPO rewardPointPage;
 }
