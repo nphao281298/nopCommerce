@@ -124,12 +124,34 @@ public class BasePage {
         return By.xpath(locator);
     }
 
+
+    public By getByLocator(String prefixLocator){
+        By by = null;
+
+        if (prefixLocator.toLowerCase().startsWith("id")){
+            by = By.id(prefixLocator.substring(3));
+        }else if (prefixLocator.toLowerCase().startsWith("class")){
+            by = By.className(prefixLocator.substring(6));
+        }else if (prefixLocator.toLowerCase().startsWith("name")){
+            by = By.name(prefixLocator.substring(5));
+        }else if (prefixLocator.toLowerCase().startsWith("tagname")){
+            by = By.tagName(prefixLocator.substring(8));
+        }else if (prefixLocator.toLowerCase().startsWith("css")){
+            by = By.cssSelector(prefixLocator.substring(4));
+        }else if (prefixLocator.toLowerCase().startsWith("xpath")){
+            by = By.xpath(prefixLocator.substring(6));
+        }else {
+            throw new RuntimeException("Locator type is not support!!");
+        }
+        return by;
+    }
+
     public WebElement getWebElement(WebDriver webDriver, String locator){
-        return webDriver.findElement(getByXpath(locator));
+        return webDriver.findElement(getByLocator(locator));
     }
 
     public List<WebElement> getListWebElement (WebDriver webDriver, String locator){
-        return webDriver.findElements(getByXpath(locator));
+        return webDriver.findElements(getByLocator(locator));
     }
 
     public void clickToElement (WebDriver webDriver, String locator){
@@ -162,7 +184,7 @@ public class BasePage {
         sleepInSecond(1);
 
         List<WebElement> speedDropdownItems =
-                new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childLocator)));
+                new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(childLocator)));
 
         for (WebElement tempItem : speedDropdownItems){
             if (tempItem.getText().trim().equals(expectedTextItem)){
@@ -228,7 +250,7 @@ public class BasePage {
     * Can xem lai
     * */
     public void switchToIframe(WebDriver webDriver, String locator){
-        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(getByXpath(locator)));
+        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(getByLocator(locator)));
 //        webDriver.switchTo().frame(getWebElement(webDriver, locator));
     }
 
@@ -312,7 +334,7 @@ public class BasePage {
     }
 
     public void waitForElementVisible(WebDriver webDriver, String locator){
-        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }
 
     public void waitForListElementVisible(WebDriver webDriver, String locator){
@@ -320,7 +342,7 @@ public class BasePage {
     }
 
     public void waitForElementInVisible(WebDriver webDriver, String locator){
-        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locator)));
     }
 
     public void waitForListElementInVisible(WebDriver webDriver, String locator){
