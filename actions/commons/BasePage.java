@@ -124,6 +124,9 @@ public class BasePage {
         return By.xpath(locator);
     }
 
+    private String castParameter(String locator, String... restParameter){
+        return String.format(locator, (Object[]) restParameter);
+    }
 
     public By getByLocator(String prefixLocator){
         By by = null;
@@ -150,17 +153,33 @@ public class BasePage {
         return webDriver.findElement(getByLocator(locator));
     }
 
+    public WebElement getWebElement(WebDriver webDriver, String locator, String restParamter){
+        return webDriver.findElement(getByLocator(castParameter(locator, restParamter)));
+    }
+
     public List<WebElement> getListWebElement (WebDriver webDriver, String locator){
         return webDriver.findElements(getByLocator(locator));
+    }
+
+    public List<WebElement> getListWebElement (WebDriver webDriver, String locator, String restParamter){
+        return webDriver.findElements(getByLocator(castParameter(locator, restParamter)));
     }
 
     public void clickToElement (WebDriver webDriver, String locator){
         getWebElement(webDriver, locator).click();
     }
 
+    public void clickToElement (WebDriver webDriver, String locator, String restParameter){
+        getWebElement(webDriver, castParameter(locator, restParameter)).click();
+    }
+
     public void sendKeysToElement(WebDriver webDriver, String locator, String valueToSend){
         getWebElement(webDriver, locator).clear();
         getWebElement(webDriver, locator).sendKeys(valueToSend);
+    }
+    public void sendKeysToElement(WebDriver webDriver, String locator, String valueToSend, String restParameter){
+        getWebElement(webDriver, castParameter(locator, restParameter)).clear();
+        getWebElement(webDriver, castParameter(locator, restParameter)).sendKeys(valueToSend);
     }
 
     public String getElementText(WebDriver webDriver, String locator){
@@ -197,6 +216,10 @@ public class BasePage {
 
     public String getElementAttribute(WebDriver webDriver, String locator, String attributeName){
         return getWebElement(webDriver, locator).getAttribute(attributeName);
+    }
+
+    public String getElementAttribute(WebDriver webDriver, String locator, String attributeName, String restParameter){
+        return getWebElement(webDriver, castParameter(locator, restParameter)).getAttribute(attributeName);
     }
 
     public String getElementCssValue(WebDriver webDriver, String locator, String cssPropertyName){
@@ -336,7 +359,9 @@ public class BasePage {
     public void waitForElementVisible(WebDriver webDriver, String locator){
         new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }
-
+    public void waitForElementVisible(WebDriver webDriver, String locator, String restParameter){
+        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(castParameter(locator, restParameter))));
+    }
     public void waitForListElementVisible(WebDriver webDriver, String locator){
         new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfAllElements(getListWebElement(webDriver, locator)));
     }
@@ -351,6 +376,13 @@ public class BasePage {
 
     public void waitForElementClickable(WebDriver webDriver, String locator){
         new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(webDriver,locator)));
+    }
+    public void waitForElementClickable(WebDriver webDriver, String locator, String restParameter){
+        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(webDriver,castParameter(locator,restParameter))));
+    }
+
+    public void waitForElementClickable(WebDriver webDriver, String locator, String... restParameter){
+        new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(webDriver,castParameter(locator,restParameter))));
     }
 
     // -----Only use for Level_07
