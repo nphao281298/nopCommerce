@@ -8,7 +8,7 @@
     <test verbose="1" preserve-order="true" name="Run on Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_09_Switch_Side_Url" />
+            <class name="com.nopcommerce.account.Level_10_Dynamic_Locator" />
         </classes>
     </test>
 
