@@ -1,14 +1,15 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
-import commons.PageGenerator;
+import pageObject.nopCommerce.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObject.users.*;
+import pageObject.nopCommerce.users.*;
+
 
 public class Level_07_Switch_Page_Object extends BaseTest {
 
