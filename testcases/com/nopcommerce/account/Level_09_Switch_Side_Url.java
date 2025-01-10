@@ -1,18 +1,18 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
-import commons.PageGenerator;
+import pageObject.nopCommerce.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObject.admin.AdminDashboardPO;
-import pageObject.admin.AdminLoginPO;
-import pageObject.users.UserHomePO;
-import pageObject.users.UserLoginPO;
-import pageObject.users.UserRegisterPO;
+import pageObject.nopCommerce.admin.AdminDashboardPO;
+import pageObject.nopCommerce.admin.AdminLoginPO;
+import pageObject.nopCommerce.users.UserHomePO;
+import pageObject.nopCommerce.users.UserLoginPO;
+import pageObject.nopCommerce.users.UserRegisterPO;
 
 public class Level_09_Switch_Side_Url extends BaseTest {
     @Parameters({"browser", "userUrl", "adminUrl"})

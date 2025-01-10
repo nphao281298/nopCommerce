@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.nopCommerce;
 
 public class PageBaseUI {
     public static final String ADDRESS_LINK = "xpath=//div[contains(@class, 'block-account-navigation')]//li[contains(@class, 'customer-addresses')]/a";
