@@ -11,4 +11,13 @@ public class HomePageUI {
             "td[@class='qgrd-actions']/button[contains(@class,'remove')]";
     public static final String DYNAMIC_EDIT_BUTTON_BY_COUNTRY_NAME = "xpath=//td[@data-key='country' and text()='%s']/preceding-sibling::" +
             "td[@class='qgrd-actions']/button[contains(@class,'edit')]";
+
+    public static final String LOAD_DATA_BUTTON = "xpath=//button[@id='load']";
+    public static final String DYNAMIC_PRECEDING_SIBLING_COLUMN_NUMBER = "xpath=//th[text()='%s']/preceding-sibling::th";
+    public static final String DYNAMIC_TEXTBOX_BY_ROW_AND_COLUMN_INDEX = "xpath=//tr[%s]/td[%s]/input";
+    public static final String DYNAMIC_DROPDOWN_BY_ROW_AND_COLUMN_INDEX = "xpath=//tr[%s]/td[%s]//select";
+    public static final String DYNAMIC_CHECKBOX_BY_ROW_AND_COLUMN_INDEX = "xpath=//tr[%s]/td[%s]//input[@type='checkbox']";
+    public static final String DYNAMIC_ICON_BY_ROW_INDEX = "xpath=//tr[%s]/td//button[contains(@title,'%s')]";
+    public static final String DYNAMIC_PRECEDING_SIBLING_COLUMN_NUMBER_2 = "";
+    public static final String ALL_VALUE_BY_COLUMN_INDEX = "";
 }

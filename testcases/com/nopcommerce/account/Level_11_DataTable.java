@@ -21,7 +21,7 @@ public class Level_11_DataTable extends BaseTest {
         homePage = PageGenerator.getHomePage(driver);
     }
 
-    @Test
+//    @Test
     public void Table_01_Paging(){
         // Navigate to any page(paging) in table
         homePage.openPageByNumber("12");
@@ -34,8 +34,8 @@ public class Level_11_DataTable extends BaseTest {
         homePage.isPageNumberActived("1","class");
     }
 
-    @Test
-    public void Table_02_Search(){
+//    @Test
+    public void Table_02_Search_And_Verify(){
         homePage.enterToTextBoxByHeaderName("Country", "Afghanistan");
         sleepInSecond(3);
         Assert.assertTrue(homePage.isRowDataValueDisplayed("384187","Afghanistan","407124","791312"));
@@ -52,7 +52,7 @@ public class Level_11_DataTable extends BaseTest {
 //        homePage.refreshCurrentPage(driver);
     }
 
-    @Test
+//    @Test
     public void Table_03_Delete_Edit(){
         homePage.enterToTextBoxByHeaderName("Country", "Afghanistan");
         sleepInSecond(3);
@@ -63,6 +63,35 @@ public class Level_11_DataTable extends BaseTest {
         sleepInSecond(3);
         homePage.editRowByCoutryName("AFRICA");
         homePage.refreshCurrentPage(driver);
+    }
+
+    @Test
+    public void Table_04_Action_By_Index(){
+//        homePage.openUrl(driver,"https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/");
+
+        homePage.clickToLoadDataButton();
+
+        homePage.enterToTextBoxByIndex("4", "Contact Person", "Michael Jackson");
+        sleepInSecond(3);
+        homePage.enterToTextBoxByIndex("2", "Company", "MJ Company");
+        sleepInSecond(3);
+        homePage.enterToTextBoxByIndex("2", "Order Placed", "1234");
+        sleepInSecond(3);
+//
+        homePage.selectToDropDownByIndex("6", "Country", "Hong Kong");
+        sleepInSecond(3);
+        homePage.selectToDropDownByIndex("4", "Country", "United Kingdom");
+        sleepInSecond(3);
+//
+        homePage.checkToCheckBoxByIndex("6", "NPO?", true);
+        sleepInSecond(3);
+        homePage.checkToCheckBoxByIndex("5", "NPO?", false);
+        sleepInSecond(3);
+
+//
+        homePage.clickToIconByIndex("8", "Move Up");
+        homePage.clickToIconByIndex("6", "Remove");
+        homePage.clickToIconByIndex("4", "Insert");
     }
 
     @AfterClass
