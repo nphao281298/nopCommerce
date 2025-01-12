@@ -188,6 +188,10 @@ public class BasePage {
         return getWebElement(webDriver, locator).getText();
     }
 
+    public String getElementText(WebDriver webDriver, String locator, String... restParameter){
+        return getWebElement(webDriver, locator).getText();
+    }
+
     public void selecteItemInDefaultDropdown(WebDriver webDriver, String locator, String itemValue){
         new Select(getWebElement(webDriver, locator)).selectByVisibleText(itemValue);
     }
@@ -406,6 +410,16 @@ public class BasePage {
     }
     public void waitForElementClickable(WebDriver webDriver, String locator, String... restParameter){
         new WebDriverWait(webDriver, Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable(getWebElement(webDriver,castParameter(locator,restParameter))));
+    }
+
+    public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
+        String filePath = GlobalConstants.UPLOAD_PATH;
+        String fullFileName = "";
+        for (String file : fileNames) {
+            fullFileName += filePath + file + "\n";
+        }
+        String finalFileName = fullFileName.trim();
+        getWebElement(driver, PageBaseUI.UPLOAD_FILE_TYPE).sendKeys(finalFileName);
     }
 
     // -----Only use for Level_07
