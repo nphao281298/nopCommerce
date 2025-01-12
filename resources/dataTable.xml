@@ -8,7 +8,7 @@
     <test verbose="1" preserve-order="true" name="Run on Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_11_DataTable" />
+            <class name="com.jquery.cases.Level_11_DataTable" />
         </classes>
     </test>
 

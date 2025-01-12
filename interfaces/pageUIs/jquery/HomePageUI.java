@@ -20,4 +20,9 @@ public class HomePageUI {
     public static final String DYNAMIC_ICON_BY_ROW_INDEX = "xpath=//tr[%s]/td//button[contains(@title,'%s')]";
     public static final String DYNAMIC_PRECEDING_SIBLING_COLUMN_NUMBER_2 = "";
     public static final String ALL_VALUE_BY_COLUMN_INDEX = "";
+
+    public static final String FILE_LOADED_BY_FILE_NAME = "xpath=//p[@class='name' and text()='%s']";
+    public static final String UPLOAD_BUTTON = "css=td>button.start";
+    public static final String FILE_UPLOADED_SUCCESS_BY_FILE_NAME = "xpath=//p[@class='name']/a[text()='%s']";
+    public static final String LIST_UPLOAD_BUTTON = "";
 }
