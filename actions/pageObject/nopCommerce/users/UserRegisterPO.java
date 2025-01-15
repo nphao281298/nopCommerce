@@ -51,5 +51,8 @@ public class UserRegisterPO extends BasePage {
         return PageGenerator.getUserHomePage(driver);
     }
 
-
+    public String getRegisterPagetitle(){
+        waitForElementVisible(driver, UserRegisterPageUI.REGISTER_PAGE_TITLE);
+        return getElementText(driver, UserRegisterPageUI.REGISTER_PAGE_TITLE);
+    }
 }

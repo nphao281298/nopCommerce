@@ -14,5 +14,6 @@ public class UserRegisterPageUI {
     public static final String CONFIRM_PASSWORD_ERROR_MSG = "xpath=//span[@id = 'ConfirmPassword-error']";
     public static final String REGISTRATION_COMPLETED_MSG = "xpath=//div[@class = 'result']";
     public static final String NOP_COMMERCE_LOG = "xpath=//div[@class = 'header-logo']//img";
+    public static final String REGISTER_PAGE_TITLE = "xpath=//h1[text()='Register']";
 }
 
