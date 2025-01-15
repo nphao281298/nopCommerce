@@ -1,6 +1,7 @@
 package commons;
 
-import com.google.common.base.VerifyException;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -15,6 +16,12 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     String projecPath = System.getProperty("user.dir");
     private WebDriver driver;
+    protected final Log log;
+
+    public BaseTest() {
+        log = LogFactory.getLog(getClass());
+    }
+
     protected WebDriver getBrowserDriver(String browserName){
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
 
@@ -63,8 +70,10 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertTrue(condition);
+            log.info("------PASSED------");
         } catch (Throwable e) {
             pass = false;
+            log.info("------FAILED------");
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
         }
@@ -74,8 +83,10 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertFalse(condition);
+            log.info("------PASSED------");
         } catch (Throwable e) {
             pass = false;
+            log.info("------FAILED------");
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
         }
@@ -85,8 +96,10 @@ public class BaseTest {
         boolean pass = true;
         try {
             Assert.assertEquals(actual, expected);
+            log.info("------PASSED------");
         } catch (Throwable e) {
             pass = false;
+            log.info("------FAILED------");
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
         }
