@@ -48,7 +48,7 @@ public class Level_14_Log4j extends BaseTest {
         registerPage.clickToRegisterButton();
 
         log.info("User_01_Register - STEP 08: getRegisterSuccessMessageText ");
-        Assert.assertEquals(registerPage.getRegisterSuccessMessageText(),"Your registration completed");
+        Assert.assertEquals(registerPage.getRegisterSuccessMessageText(),"Your registration completed!!");
 
         log.info("User_01_Register - STEP 09: clickToLogOutButton ");
         homePage.clickToLogOutButton();

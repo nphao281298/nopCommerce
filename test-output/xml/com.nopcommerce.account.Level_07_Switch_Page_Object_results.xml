@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Edge"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.812">
+  <properties />
+  
+  
+            <testcase name="User_01_Register" time="0.645" classname="com.nopcommerce.account.Level_07_Switch_Page_Object" />
+                <testcase name="User_04_Switch_page" time="0.400" classname="com.nopcommerce.account.Level_07_Switch_Page_Object" />
+                <testcase name="User_02_Login" time="0.639" classname="com.nopcommerce.account.Level_07_Switch_Page_Object" />
+                <testcase name="User_03_MyAccount" time="0.128" classname="com.nopcommerce.account.Level_07_Switch_Page_Object" />
+      
+</testsuite>

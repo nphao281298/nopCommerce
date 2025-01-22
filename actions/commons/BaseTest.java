@@ -1,7 +1,7 @@
 package commons;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -10,16 +10,22 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 
+import java.io.File;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     String projecPath = System.getProperty("user.dir");
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     private WebDriver driver;
-    protected final Log log;
+    protected final Logger log;
 
     public BaseTest() {
-        log = LogFactory.getLog(getClass());
+        log = LogManager.getLogger(getClass());
     }
 
     protected WebDriver getBrowserDriver(String browserName){
@@ -104,6 +110,27 @@ public class BaseTest {
             Reporter.getCurrentTestResult().setThrowable(e);
         }
         return pass;
+    }
+
+    public void deleteReportFolder(){
+        deleteAllFileInFolder("htmlReportNG");
+    }
+
+    private void deleteAllFileInFolder(String folderName) {
+        try {
+            String pathFolderDownload = GlobalConstants.PROJECT_PATH + File.separator + folderName;
+            File file = new File(pathFolderDownload);
+            File[] listOfFiles = file.listFiles();
+            if (listOfFiles.length != 0) {
+                for (int i = 0; i < listOfFiles.length; i++) {
+                    if (listOfFiles[i].isFile() && !listOfFiles[i].getName().equals("environment.properties")) {
+                        new File(listOfFiles[i].toString()).delete();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+        }
     }
 
     public String getEmailRandom() {
