@@ -1,0 +1,27 @@
+[25-02-2025 23:11:51.973 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 01: openRegisterPage
+[25-02-2025 23:11:52.066 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 02: enterToFirstNameTextBox John
+[25-02-2025 23:11:52.105 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 03: enterToLasttNameTextBox Philip
+[25-02-2025 23:11:52.131 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 04: enterToEmailTextBox John46@kennedy.us
+[25-02-2025 23:11:52.161 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 05: enterToPasswordTextBox Aa@123456
+[25-02-2025 23:11:52.194 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 06: enterToconfirmPasswordTextBox Aa@123456
+[25-02-2025 23:11:52.224 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 07: clickToRegisterButton 
+[25-02-2025 23:11:52.328 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 08: getRegisterSuccessMessageText 
+[25-02-2025 23:11:52.343 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 09: clickToLogOutButton 
+[25-02-2025 23:11:55.828 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 01: openRegisterPage
+[25-02-2025 23:11:55.910 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 02: enterToFirstNameTextBox John
+[25-02-2025 23:11:56.004 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 03: enterToLasttNameTextBox Philip
+[25-02-2025 23:11:56.050 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 04: enterToEmailTextBox John39960@kennedy.us
+[25-02-2025 23:11:56.119 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 05: enterToPasswordTextBox Aa@123456
+[25-02-2025 23:11:56.170 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 06: enterToconfirmPasswordTextBox Aa@123456
+[25-02-2025 23:11:56.217 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 07: clickToRegisterButton 
+[25-02-2025 23:11:56.306 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 08: getRegisterSuccessMessageText 
+[25-02-2025 23:11:56.337 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 09: clickToLogOutButton 
+[25-02-2025 23:11:59.777 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 01: openRegisterPage
+[25-02-2025 23:11:59.872 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 02: enterToFirstNameTextBox John
+[25-02-2025 23:11:59.972 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 03: enterToLasttNameTextBox Philip
+[25-02-2025 23:12:00.021 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 04: enterToEmailTextBox John12423@kennedy.us
+[25-02-2025 23:12:00.084 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 05: enterToPasswordTextBox Aa@123456
+[25-02-2025 23:12:00.138 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 06: enterToconfirmPasswordTextBox Aa@123456
+[25-02-2025 23:12:00.183 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 07: clickToRegisterButton 
+[25-02-2025 23:12:00.289 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 08: getRegisterSuccessMessageText 
+[25-02-2025 23:12:00.312 INFO com.nopcommerce.account.Level_14_Log4j] - User_01_Register - STEP 09: clickToLogOutButton 
