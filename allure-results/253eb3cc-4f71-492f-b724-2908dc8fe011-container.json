@@ -1,0 +1,1 @@
+{"uuid":"253eb3cc-4f71-492f-b724-2908dc8fe011","name":"NopCommerce Automation Testing","children":["cb793bdc-81a6-460b-9a3a-644c72efe74f"],"befores":[{"name":"deleteReportFolder","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1740583615022,"stop":1740583615036}],"afters":[],"start":1740583615008,"stop":1740583622169}
