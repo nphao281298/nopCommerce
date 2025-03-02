@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.util.Random;
@@ -30,7 +31,6 @@ public class BaseTest {
 
     protected WebDriver getBrowserDriver(String browserName){
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
-
         if (browser == BrowserList.FIREFOX) {
             driver = new FirefoxDriver();
         } else if (browser == BrowserList.CHROME){
@@ -112,8 +112,10 @@ public class BaseTest {
         return pass;
     }
 
+    @BeforeSuite
     public void deleteReportFolder(){
         deleteAllFileInFolder("htmlReportNG");
+        deleteAllFileInFolder("allure-results");
     }
 
     private void deleteAllFileInFolder(String folderName) {
@@ -136,6 +138,11 @@ public class BaseTest {
     public String getEmailRandom() {
         Random rand = new Random();
         return "John" + rand.nextInt(99999) + "@kennedy.us";
+    }
+
+    public String getEmailRandom(String prefix) {
+        Random rand = new Random();
+        return prefix + rand.nextInt(99999) + "@kennedy.us";
     }
 
     protected void closeBrowser(){

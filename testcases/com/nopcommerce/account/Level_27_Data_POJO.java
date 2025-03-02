@@ -1,6 +1,10 @@
 package com.nopcommerce.account;
 
 import commons.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -9,74 +13,63 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObject.nopCommerce.PageGenerator;
 import pageObject.nopCommerce.users.*;
+import pojoData.UserInfo;
+import utilities.FakerConfig;
 
-public class Level_14_Log4j extends BaseTest {
+@Feature("User")
+public class Level_27_Data_POJO extends BaseTest {
 
     @Parameters("browser")
     @BeforeClass
     public void beforeClass(String browserName){
         driver = getBrowserDriver(browserName);
         homePage = PageGenerator.getUserHomePage(driver);
-
-        firstName = "John";
-        lastName = "Philip";
-        emailAddress = getEmailRandom();
-        password = "Aa@123456";
+        userInfo = UserInfo.getUser();
+        userInfo.setEmailAddress(getEmailRandom("john"));
+        userInfo.setFirstName("John");
+        userInfo.setLastName("Kennedy");
+        userInfo.setPassword("123456");
     }
 
+    @Description("Register to application")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void User_01_Register(){
-        log.info("User_01_Register - STEP 01: openRegisterPage");
         registerPage = homePage.openRegisterPage();
 
-        log.info("User_01_Register - STEP 02: enterToFirstNameTextBox " + firstName);
-        registerPage.enterToFirstNameTextBox(firstName);
+//        registerPage.enterToFirstNameTextBox(userInfo.getFirstName());
+//        registerPage.enterToLasttNameTextBox(userInfo.getLastName());
+//        registerPage.enterToEmailTextBox(userInfo.getEmailAddress());
+//        registerPage.enterToPasswordTextBox(userInfo.getPassword());
+//        registerPage.enterToconfirmPasswordTextBox(userInfo.getPassword());
+        registerPage.setToRegisterForm(userInfo);
 
-        log.info("User_01_Register - STEP 03: enterToLasttNameTextBox "+ lastName);
-        registerPage.enterToLasttNameTextBox(lastName);
-
-        log.info("User_01_Register - STEP 04: enterToEmailTextBox "+ emailAddress);
-        registerPage.enterToEmailTextBox(emailAddress);
-
-        log.info("User_01_Register - STEP 05: enterToPasswordTextBox "+ password);
-        registerPage.enterToPasswordTextBox(password);
-
-        log.info("User_01_Register - STEP 06: enterToconfirmPasswordTextBox "+ password);
-        registerPage.enterToconfirmPasswordTextBox(password);
-
-        log.info("User_01_Register - STEP 07: clickToRegisterButton ");
         registerPage.clickToRegisterButton();
 
-        log.info("User_01_Register - STEP 08: getRegisterSuccessMessageText ");
         Assert.assertEquals(registerPage.getRegisterSuccessMessageText(),"Your registration completed");
 
-        log.info("User_01_Register - STEP 09: clickToLogOutButton ");
         homePage.clickToLogOutButton();
     }
 
+    @Description("Login to application")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void User_02_Login(){
         loginPage = homePage.openLoginPage();
-        homePage = loginPage.LoginToSystem(emailAddress, password);
+        homePage = loginPage.LoginToSystem(userInfo);
         Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
     }
 
     @Test
     public void User_03_MyAccount() {
         customerInfoPage = homePage.openCustomerInforPage();
-        Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(), firstName);
-        Assert.assertEquals(customerInfoPage.getLastNameTextboxValue(), lastName);
-        Assert.assertEquals(customerInfoPage.getEmailTextboxValue(), emailAddress);
+        Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(), userInfo.getFirstName());
+        Assert.assertEquals(customerInfoPage.getLastNameTextboxValue(), userInfo.getLastName());
+        Assert.assertEquals(customerInfoPage.getEmailTextboxValue(), userInfo.getEmailAddress());
     }
 
     @Test
     public void User_04_Dynamic_Page() {
-//        addressPage = customerInfoPage.openAddressPage();
-//        rewardPointPage = addressPage.openRewardPointPage();
-//        orderPage = rewardPointPage.openOrderPage();
-//        addressPage = orderPage.openAddressPage();
-//        customerInfoPage = addressPage.openCustomerInfoPage();
-        /*------*/
         addressPage = (UserAddressPO) customerInfoPage.openSidebarLinkByPageName("Addresses");
         rewardPointPage = (UserRewarPointPO) addressPage.openSidebarLinkByPageName("Reward points");
         orderPage = (UserOrderPO) rewardPointPage.openSidebarLinkByPageName("Orders");
@@ -119,4 +112,6 @@ public class Level_14_Log4j extends BaseTest {
     private UserAddressPO addressPage;
     private UserOrderPO orderPage;
     private UserRewarPointPO rewardPointPage;
+    private FakerConfig fakerConfig;
+    private UserInfo userInfo;
 }
