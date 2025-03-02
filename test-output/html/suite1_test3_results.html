@@ -12,151 +12,11 @@
 <body>
 <h1>Run on Edge</h1>
 <p>
-  Test duration: 5.357s
+  Test duration: 4.546s
 </p>
 
 
 
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.nopcommerce.account.Level_14_Log4j</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  User_01_Register
-      </td>
-  <td class="duration">
-    0.590s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        User_01_Register - STEP 01: openRegisterPage
-                                User_01_Register - STEP 02: enterToFirstNameTextBox John
-                                User_01_Register - STEP 03: enterToLasttNameTextBox Philip
-                                User_01_Register - STEP 04: enterToEmailTextBox John33512@kennedy.us
-                                User_01_Register - STEP 05: enterToPasswordTextBox Aa@123456
-                                User_01_Register - STEP 06: enterToconfirmPasswordTextBox Aa@123456
-                                User_01_Register - STEP 07: clickToRegisterButton 
-                                User_01_Register - STEP 08: getRegisterSuccessMessageText 
-                  </div>
-    
-
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [Your registration completed!!] but found [Your registration completed]</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:111)<br />
-              org.testng.Assert.failNotEquals(Assert.java:1578)<br />
-              org.testng.Assert.assertEqualsImpl(Assert.java:150)<br />
-              org.testng.Assert.assertEquals(Assert.java:132)<br />
-              org.testng.Assert.assertEquals(Assert.java:656)<br />
-              org.testng.Assert.assertEquals(Assert.java:666)<br />
-              com.nopcommerce.account.Level_14_Log4j.User_01_Register(Level_14_Log4j.java:51)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:739)<br />
-              org.testng.TestRunner.run(TestRunner.java:614)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:312)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1112)<br />
-              org.testng.TestNG.run(TestNG.java:1079)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  User_02_Login
-      </td>
-  <td class="duration">
-    1.060s
-  </td>
-  <td class="result">
-        
-    
-        
-
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;ico-login&apos;]&quot;}<br/>
-&nbsp; (Session info: MicrosoftEdge=131.0.2903.48)<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d&apos;<br/>
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.2&apos;, java.version: &apos;17.0.8&apos;<br/>
-Driver info: org.openqa.selenium.edge.EdgeDriver<br/>
-Command: [9711b4a3443e0038f1aa62e73493af95, findElement {value=//a[@class=&apos;ico-login&apos;], using=xpath}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 131.0.2903.48, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:52227}, msedge: {msedgedriverVersion: 131.0.2903.112 (16ab910a6e7..., userDataDir: /var/folders/tk/xb5_qjt95dn...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52227/devtoo..., se:cdpVersion: 131.0.2903.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: 9711b4a3443e0038f1aa62e73493af95</b></a><br />
-    <div class="stackTrace" id="exception-1">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)<br />
-              org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)<br />
-              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
-              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)<br />
-              commons.BasePage.getWebElement(BasePage.java:155)<br />
-              commons.BasePage.waitForElementClickable(BasePage.java:409)<br />
-              pageObject.nopCommerce.users.UserHomePO.openLoginPage(UserHomePO.java:25)<br />
-              com.nopcommerce.account.Level_14_Log4j.User_02_Login(Level_14_Log4j.java:59)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
-              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br />
-              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br />
-              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
-              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br />
-              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br />
-              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br />
-              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:739)<br />
-              org.testng.TestRunner.run(TestRunner.java:614)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:312)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1112)<br />
-              org.testng.TestNG.run(TestNG.java:1079)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
-      </td>
-</tr>
-      </table>
 
 
   <table class="resultsTable">
@@ -167,16 +27,59 @@ Session ID: 9711b4a3443e0038f1aa62e73493af95</b></a><br />
             
 <tr>
   <td class="method">
-                  User_03_MyAccount
+                  User_01_Register
       </td>
   <td class="duration">
-    0.151s
+    0.626s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_03_MyAccount_22_01_2025_11_12_57.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_03_MyAccount_22_01_2025_11_12_57.png" height='100' width='150'/> </a></br>
+                        User_01_Register - STEP 01: openRegisterPage
+                                User_01_Register - STEP 02: enterToFirstNameTextBox John
+                                User_01_Register - STEP 03: enterToLasttNameTextBox Philip
+                                User_01_Register - STEP 04: enterToEmailTextBox John12423@kennedy.us
+                                User_01_Register - STEP 05: enterToPasswordTextBox Aa@123456
+                                User_01_Register - STEP 06: enterToconfirmPasswordTextBox Aa@123456
+                                User_01_Register - STEP 07: clickToRegisterButton 
+                                User_01_Register - STEP 08: getRegisterSuccessMessageText 
+                                User_01_Register - STEP 09: clickToLogOutButton 
+                                <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_01_Register_25_02_2025_11_12_00.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_01_Register_25_02_2025_11_12_00.png" height='100' width='150'/> </a></br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  User_02_Login
+      </td>
+  <td class="duration">
+    0.266s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_02_Login_25_02_2025_11_12_00.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_02_Login_25_02_2025_11_12_00.png" height='100' width='150'/> </a></br>
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  User_03_MyAccount
+      </td>
+  <td class="duration">
+    0.125s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_03_MyAccount_25_02_2025_11_12_00.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_03_MyAccount_25_02_2025_11_12_00.png" height='100' width='150'/> </a></br>
                   </div>
     
 
@@ -187,13 +90,13 @@ Session ID: 9711b4a3443e0038f1aa62e73493af95</b></a><br />
                   User_04_Dynamic_Page
       </td>
   <td class="duration">
-    0.431s
+    0.378s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_04_Dynamic_Page_22_01_2025_11_12_58.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_04_Dynamic_Page_22_01_2025_11_12_58.png" height='100' width='150'/> </a></br>
+                        <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_04_Dynamic_Page_25_02_2025_11_12_01.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_04_Dynamic_Page_25_02_2025_11_12_01.png" height='100' width='150'/> </a></br>
                   </div>
     
 
@@ -204,13 +107,13 @@ Session ID: 9711b4a3443e0038f1aa62e73493af95</b></a><br />
                   User_05_Dynamic_Page
       </td>
   <td class="duration">
-    0.409s
+    0.370s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
-                        <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_05_Dynamic_Page_22_01_2025_11_12_58.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_05_Dynamic_Page_22_01_2025_11_12_58.png" height='100' width='150'/> </a></br>
+                        <br><a target="_blank" href="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_05_Dynamic_Page_25_02_2025_11_12_01.png"><img src="file:////Users/phonghaonguyen/AutomationFCMakeByMe/nopCommerce/htmlReportNG/User_05_Dynamic_Page_25_02_2025_11_12_01.png" height='100' width='150'/> </a></br>
                   </div>
     
 

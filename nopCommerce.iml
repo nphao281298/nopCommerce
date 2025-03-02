@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/testcases" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/javaSDET" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/testData" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -15,6 +16,7 @@
     <orderEntry type="library" name="commons-codec-1.11" level="project" />
     <orderEntry type="library" name="log4j2" level="project" />
     <orderEntry type="library" name="reportng" level="project" />
-    <orderEntry type="library" name="allure (2)" level="project" />
+    <orderEntry type="library" name="allure" level="project" />
+    <orderEntry type="library" name="libFake" level="project" />
   </component>
 </module>

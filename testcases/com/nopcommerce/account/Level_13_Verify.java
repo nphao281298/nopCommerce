@@ -20,7 +20,7 @@ public class Level_13_Verify extends BaseTest {
 
         firstName = "John";
         lastName = "Philip";
-        emailAddress = getEmailRandom();
+        emailAddress = getEmailRandom("");
         password = "Aa@123456";
     }
 
