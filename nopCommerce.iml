@@ -18,5 +18,6 @@
     <orderEntry type="library" name="reportng" level="project" />
     <orderEntry type="library" name="allure" level="project" />
     <orderEntry type="library" name="libFake" level="project" />
+    <orderEntry type="library" name="jackson" level="project" />
   </component>
 </module>
