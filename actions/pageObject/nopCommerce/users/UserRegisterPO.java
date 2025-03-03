@@ -2,6 +2,7 @@ package pageObject.nopCommerce.users;
 
 import commons.BasePage;
 import io.qameta.allure.Step;
+import jsonData.UserInforJson;
 import pageObject.nopCommerce.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import pageUIs.nopCommerce.users.UserRegisterPageUI;
@@ -70,6 +71,15 @@ public class UserRegisterPO extends BasePage {
         enterToFirstNameTextBox(userInfo.getFirstName());
         enterToLasttNameTextBox(userInfo.getLastName());
         enterToEmailTextBox(userInfo.getEmailAddress());
+        enterToPasswordTextBox(userInfo.getPassword());
+        enterToconfirmPasswordTextBox(userInfo.getPassword());
+    }
+
+    @Step("Set data to register form {0}")
+    public void enterToRegisterForm(UserInforJson userInfo){
+        enterToFirstNameTextBox(userInfo.getFirstname());
+        enterToLasttNameTextBox(userInfo.getLastname());
+        enterToEmailTextBox(userInfo.getEmail());
         enterToPasswordTextBox(userInfo.getPassword());
         enterToconfirmPasswordTextBox(userInfo.getPassword());
     }

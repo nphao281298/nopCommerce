@@ -1,5 +1,6 @@
 package commons;
 
+import java.io.File;
 import java.nio.file.FileSystems;
 
 public class GlobalConstants {
@@ -44,5 +45,6 @@ public class GlobalConstants {
     // Data Test/Environment Paths
     public static final String DATA_TEST_PATH = PROJECT_PATH + SEPARATOR + "dataTest" + SEPARATOR;
     public static final String ENVIRONMENT_CONFIG_PATH = PROJECT_PATH + SEPARATOR + "environmentConfig" + SEPARATOR;
+    public static final String RESOURCE_PATH = PROJECT_PATH + File.separator + "resources" + File.separator;
 
 }
