@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Firefox"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.436">
+  <properties />
+  
+  
+            <testcase name="User_05_Dynamic_Page" time="0.286" classname="com.nopcommerce.account.Level_28_Data_Json" />
+                <testcase name="User_04_Dynamic_Page" time="0.281" classname="com.nopcommerce.account.Level_28_Data_Json" />
+                <testcase name="User_01_Register" time="0.560" classname="com.nopcommerce.account.Level_28_Data_Json" />
+                <testcase name="User_03_MyAccount" time="0.095" classname="com.nopcommerce.account.Level_28_Data_Json" />
+                <testcase name="User_02_Login" time="0.214" classname="com.nopcommerce.account.Level_28_Data_Json" />
+      
+</testsuite>
