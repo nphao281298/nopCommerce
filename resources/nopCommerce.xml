@@ -13,7 +13,7 @@
     <test verbose="1" preserve-order="true" name="Run on Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.nopcommerce.account.Level_28_Data_Json" />
+            <class name="com.nopcommerce.account.Level_29_Data_Excel" />
         </classes>
     </test>
 
